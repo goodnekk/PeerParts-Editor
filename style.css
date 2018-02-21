@@ -1,0 +1,192 @@
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: #EEEFF2;
+}
+
+canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 80%;
+    margin-left: 20%;
+    height: 100%;
+    z-index: -999;
+}
+
+.Menu {
+    font-size: 18pt;
+    padding-bottom: 5px;
+    font-weight: 500;
+    border-bottom: 1px solid grey;
+    margin: 20px;
+}
+
+.Menu-title {
+    display: inline-block;
+}
+
+.Menu-status {
+    font-size: 8pt;
+    display: inline-block;
+    margin-left: 40px;
+    font-weight: 300;
+}
+
+.Menu-Buttons{
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.Caret {
+    position: absolute;
+    background-color: #DCDDE1;
+    transition: all 0.1s ease;
+    z-index: -99;
+}
+
+.Caret-Menu {
+    position: absolute;
+    width: 250px;
+    max-height: 250px;
+    background-color: #DCDDE1;
+    z-index: 99999;
+    font-weight: 300;
+    cursor: pointer;
+    overflow-y: scroll;
+}
+
+.Caret-Menu-Option {
+    padding: 20px;
+}
+
+.Caret-Menu-Option.selected {
+    background-color: #CCCED7;
+}
+
+.Caret-Menu-Name {
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 14pt;
+}
+
+.Caret-Menu-Docs {
+    font-size: 8pt;
+    margin-left: 15px;
+}
+
+.Arrow-Down {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+
+    border-top: 5px solid #000;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+}
+
+.Arrow-Up {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+
+    border-bottom: 5px solid #000;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+}
+
+
+.SceneEditor {
+    margin: 20px;
+    cursor: pointer;
+    font-size: 14pt;
+    font-weight: 300;
+    color: #1F1E20;
+    text-transform: capitalize;
+}
+
+.Icon, .SceneNode-Icon {
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #4F8AFF;
+    display: inline-block;
+}
+
+.SceneNode-Shape {
+    display: inline-block;
+    padding: 2px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+}
+
+.SceneNode-Shape > .SceneNode-Name {
+    min-width: 80px;
+}
+
+.SceneNode-Shape > .SceneNode-Name,
+.SceneNode-Shape > .SceneNode-Children {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.SceneNode-boolean > .SceneNode-Children {
+    display: block;
+    margin-left: 20px;
+}
+
+.SceneNode-boolean > .SceneNode-Children > .SceneNode-Empty {
+    display: block;
+    float: left;
+    clear: both;
+}
+
+.SceneNode-boolean > .SceneNode-Children > .SceneNode-Shape {
+    display: block;
+}
+
+.SceneNode-Float {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+    min-width: 50px;
+}
+
+.SceneNode-Value-Selected {
+    text-align: center;
+    padding: 5px;
+    cursor: ns-resize;
+}
+
+.SceneNode-Value-Selected > .SceneNode-Value {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.SceneNode-Value-Selected > .Arrow-Up, .SceneNode-Value-Selected > .Arrow-Down{
+    display: block;
+    margin-left: calc(50% - 6px);
+}
+
+.SceneNode-ValueLabel{
+    position: absolute;
+    top: -14px;
+    font-size: 8pt;
+}
+
+.SceneNode-Value{
+    font-weight: 200;
+}
+
+.SceneNode-Empty {
+    color: #959595;
+    display: inline-block;
+    padding-left: 2px;
+    margin-left: 20px;
+}
